@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/style.css">
+		<meta charset="UTF-8">
+		<title>Calculator</title>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<div class="calc-container">
+			<div id="calc-history"></div>
+			<div class="calc-display">
+				<input type="text" id="calc-screen" value="0" disabled/>
+			</div>
+			<div class="calc-keys">
+				<button class="calc-memory" onclick="memoryClearFunc()">MC</button>
+				<button class="calc-memory" onclick="memoryRecallFunc()">MR</button>
+				<button class="calc-memory" onclick="memoryAddFunc()">M+</button>
+				<button class="calc-memory" onclick="memorySubtractFunc()">M-</button>
+
+				<button class="calc-operator" onclick="reciprocalCalc()">1/x</button>
+				<button class="calc-operator" onclick="operatorHandler('%')">%</button>
+				<button class="calc-all-clear" onclick="resetCalc()">AC</button>
+				<button class="calc-all-clear" onclick="deleteLastCharacter()">⌫</button>
+
+				<button class="calc-operator" onclick="factorialCalc()">x!</button>
+				<button class="calc-operator" onclick="exponentiationCalc()">x^n</button>
+				<button class="calc-operator" onclick="squareRootCalc()">√x</button>
+				<button class="calc-operator" onclick="operatorHandler('/')">&divide;</button>
+
+				<button class="calc-digit" onclick="numPressed(7)">7</button>
+				<button class="calc-digit" onclick="numPressed(8)">8</button>
+				<button class="calc-digit" onclick="numPressed(9)">9</button>
+				<button class="calc-operator" onclick="operatorHandler('*')">&times;</button>
+
+				<button class="calc-digit" onclick="numPressed(4)">4</button>
+				<button class="calc-digit" onclick="numPressed(5)">5</button>
+				<button class="calc-digit" onclick="numPressed(6)">6</button>
+				<button class="calc-operator" onclick="operatorHandler('-')">-</button>
+
+				<button class="calc-digit" onclick="numPressed(1)">1</button>
+				<button class="calc-digit" onclick="numPressed(2)">2</button>
+				<button class="calc-digit" onclick="numPressed(3)">3</button>
+				<button class="calc-operator" onclick="operatorHandler('+')">+</button>
+				<button class="calc-operator" onclick="changeSign()">+/-</button>
+
+				<button class="calc-digit" onclick="numPressed(0)">0</button>
+				<button class="calc-decimal" onclick="decimalInput('.')">.</button>
+				<button class="calc-equal-sign" onclick="calcResult()">=</button>
+			</div>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
